@@ -637,22 +637,28 @@ function TiltCard({ children, delay = 0 }) {
 function Projects() {
   const projects = [
     {
+      title: "Pathfinding Visualizer",
+      category: "Algorithm Tool",
+      desc: "An interactive visualization engine for complex graph algorithms like A* and Dijkstra. Users can draw walls, move nodes, and watch the algorithms find the shortest path in real-time.",
+      github: "https://github.com/Jixu-Dev/Pathfinding-Algorithm-Visualizer",
+      live: "https://pathfinding-algorithm-visualizer-sepia.vercel.app/",
+      tech: ["React", "Algorithms", "CSS Animation"],
+    },
+    {
+      title: "ResuScan AI",
+      category: "AI Application",
+      desc: "Intelligent career tool leveraging AI to analyze resumes against ATS standards. Provides instant scoring, keyword matching, and personalized optimization suggestions.",
+      github: "https://github.com/Jixu-Dev/ResuScan",
+      live: "https://resu-scan-phi.vercel.app/",
+      tech: ["React", "OpenAI API", "Tailwind"],
+    },
+    {
       title: "Premium Portfolio V2",
       category: "Personal Brand",
-      desc: "My latest personal website featuring advanced motion, dark mode aesthetics, and SEO optimization.",
+      desc: "My latest personal website featuring advanced motion, dark mode aesthetics, and SEO optimization. Designed to perform flawlessly on all devices.",
+      github: "https://github.com/Jixu-Dev/jixu-portfolio",
+      live: "https://jixu-portfolio.vercel.app/",
       tech: ["React", "Framer Motion", "Tailwind"],
-    },
-    {
-      title: "Inventory Dashboard",
-      category: "Web App",
-      desc: "A clean, data-heavy admin panel for tracking stock levels and sales metrics in real-time.",
-      tech: ["React", "Charts.js", "Grid"],
-    },
-    {
-      title: "Fashion E-Commerce",
-      category: "Online Store",
-      desc: "A concept clothing store with product filtering, cart management, and checkout flows.",
-      tech: ["Next.js", "Stripe Integration"],
     },
   ];
 
@@ -677,9 +683,9 @@ function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group bg-[#111] border border-white/10 rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all shadow-lg shadow-black/50"
+              className="group bg-[#111] border border-white/10 rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all shadow-lg shadow-black/50 flex flex-col h-full"
             >
-              <div className="h-48 bg-gray-800 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+              <div className="h-48 bg-gray-800 relative overflow-hidden group-hover:scale-105 transition-transform duration-500 shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 to-black/80"></div>
                 <div className="absolute inset-4 border border-white/5 rounded-lg border-dashed"></div>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-600 font-mono text-xs">
@@ -687,28 +693,22 @@ function Projects() {
                 </div>
               </div>
 
-              <div className="p-6 relative z-10 bg-[#111]">
+              <div className="p-6 relative z-10 bg-[#111] flex flex-col flex-grow">
                 <div className="text-xs font-bold text-purple-400 mb-2 uppercase tracking-wide">{p.category}</div>
                 <h3 className="text-xl font-bold mb-3 group-hover:text-purple-300 transition-colors">{p.title}</h3>
-                <p className="text-gray-400 text-sm mb-6 line-clamp-2">{p.desc}</p>
+                <p className="text-gray-400 text-sm mb-6 line-clamp-3 flex-grow">{p.desc}</p>
 
-                {/* Buttons (Updating Soon) */}
-                <div className="flex gap-3">
-                  <div className="relative group/btn flex-1">
-                     <button className="w-full flex items-center justify-center gap-2 py-2 rounded-lg bg-white/5 text-gray-500 text-sm font-medium cursor-not-allowed border border-white/5">
+                {/* Buttons (Active) */}
+                <div className="flex gap-3 mt-auto">
+                  <div className="flex-1">
+                     <a href={p.github} target="_blank" rel="noreferrer" className="w-full flex items-center justify-center gap-2 py-2 rounded-lg bg-white/5 text-white text-sm font-medium hover:bg-white/10 hover:border-white/20 border border-white/5 transition-colors clickable">
                         <Github size={14} /> Code
-                     </button>
-                     <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] px-2 py-1 rounded border border-white/20 opacity-0 group-hover/btn:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                       Updating Soon
-                     </span>
+                     </a>
                   </div>
-                  <div className="relative group/btn flex-1">
-                     <button className="w-full flex items-center justify-center gap-2 py-2 rounded-lg bg-white/5 text-gray-500 text-sm font-medium cursor-not-allowed border border-white/5">
+                  <div className="flex-1">
+                     <a href={p.live} target="_blank" rel="noreferrer" className="w-full flex items-center justify-center gap-2 py-2 rounded-lg bg-white/5 text-white text-sm font-medium hover:bg-white/10 hover:border-white/20 border border-white/5 transition-colors clickable">
                         <ExternalLink size={14} /> Live Demo
-                     </button>
-                     <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] px-2 py-1 rounded border border-white/20 opacity-0 group-hover/btn:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                       Updating Soon
-                     </span>
+                     </a>
                   </div>
                 </div>
               </div>
