@@ -91,7 +91,9 @@
     "p4Category": "Portfolio Website",
     "p4Desc": "Ein kreatives Portfolio für Designer mit Mediengalerien, flüssigen Animationen und interaktiven Previews.",
     "p5Category": "Realtime Chat",
-    "p5Desc": "Eine leichtgewichtige Echtzeit-Messaging-Webanwendung auf Basis der Firebase Realtime Database."
+    "p5Desc": "Eine leichtgewichtige Echtzeit-Messaging-Webanwendung auf Basis der Firebase Realtime Database.",
+    "p6Category": "Streaming-Verzeichnis",
+    "p6Desc": "Handverlesenes, verifiziertes Verzeichnis für Filme, Animes und Live-Streaming mit schneller Suche und sauberer Oberfläche."
   },
   "skills": {
     "badge": "Skills & Technologien",

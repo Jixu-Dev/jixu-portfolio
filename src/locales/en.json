@@ -91,7 +91,9 @@
     "p4Category": "Portfolio Website",
     "p4Desc": "A creative portfolio built for designers, featuring media galleries, smooth animations, and hover previews.",
     "p5Category": "Realtime Chat",
-    "p5Desc": "A lightweight instant messaging web application powered by Firebase Realtime Database."
+    "p5Desc": "A lightweight instant messaging web application powered by Firebase Realtime Database.",
+    "p6Category": "Streaming Directory",
+    "p6Desc": "A hand-curated, verified movie, anime, and live streaming directory featuring instant search, mirror health checks, and responsive design."
   },
   "skills": {
     "badge": "Skills & Technologies",

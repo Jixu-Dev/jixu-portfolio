@@ -977,6 +977,18 @@ function Chapter5_Showcase() {
       previewType: "ats",
     },
     {
+      id: "jixu-entertainments",
+      categoryType: "fullstack",
+      title: "Jixu Entertainments",
+      category: t("projects.p6Category"),
+      desc: t("projects.p6Desc"),
+      github: "https://github.com/Jixu-Dev/jixu-entertainments",
+      live: "https://jixu-entertainments.vercel.app/",
+      accent: "#FF007A",
+      tags: ["Next.js", "React", "Streaming Directory", "Tailwind CSS", "Search & Filters"],
+      previewType: "entertainments",
+    },
+    {
       id: "github-analyzer",
       categoryType: "ai",
       title: "GitHub Profile Analyzer",
@@ -1320,6 +1332,81 @@ function ProjectPreviewWidget({ type }) {
         <div className="flex justify-between text-xs text-white/50 pt-3 border-t border-white/10">
           <span>Fast Real-Time Chat</span>
           <span className="text-green-400 font-semibold">Connected</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (type === "entertainments") {
+    return (
+      <div className="w-full h-[260px] rounded-3xl bg-[#0F0716] border border-white/10 p-6 flex flex-col justify-between shadow-xl relative overflow-hidden group/preview">
+        {/* Glow effect */}
+        <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#FF007A]/20 rounded-full blur-2xl pointer-events-none" />
+        <div className="absolute -bottom-10 -left-10 w-28 h-28 bg-[#8B5CF6]/20 rounded-full blur-2xl pointer-events-none" />
+
+        {/* Header Bar */}
+        <div className="flex items-center justify-between text-xs pb-3 border-b border-white/10 relative z-10">
+          <div className="flex items-center gap-2">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF007A] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FF007A]"></span>
+            </span>
+            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF007A] via-[#A855F7] to-[#7928CA]">
+              Jixu Entertainments
+            </span>
+          </div>
+          <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-white/10 text-pink-300 font-semibold border border-pink-500/20">
+            109+ Verified Sources
+          </span>
+        </div>
+
+        {/* Content Body */}
+        <div className="my-auto space-y-2.5 relative z-10">
+          {/* Mini Search & Category Chips */}
+          <div className="flex items-center justify-between gap-1.5 text-[10px]">
+            <div className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-2.5 py-1.5 rounded-xl text-white/70 flex-1">
+              <span className="text-[#FF007A] text-xs">⚡</span>
+              <span className="truncate text-slate-300">Search 100+ streaming mirrors...</span>
+            </div>
+            <span className="px-2.5 py-1 rounded-lg bg-gradient-to-r from-[#FF007A] to-[#7928CA] text-white font-bold text-[9px] shadow-[0_0_12px_rgba(255,0,122,0.45)]">
+              4K UHD
+            </span>
+          </div>
+
+          {/* Mini Stream Cards Grid */}
+          <div className="grid grid-cols-3 gap-2 text-[10px]">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 flex flex-col justify-between hover:border-[#FF007A]/40 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="font-bold text-white text-[11px]">Movies</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              </div>
+              <div className="text-[9px] text-white/50 mt-1">24 Fast Mirrors</div>
+            </div>
+
+            <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 flex flex-col justify-between hover:border-purple-500/40 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="font-bold text-purple-300 text-[11px]">Anime</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              </div>
+              <div className="text-[9px] text-white/50 mt-1">20 HD Portals</div>
+            </div>
+
+            <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 flex flex-col justify-between hover:border-cyan-500/40 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="font-bold text-cyan-300 text-[11px]">Live TV</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              </div>
+              <div className="text-[9px] text-white/50 mt-1">18 Sports/TV</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer Bar */}
+        <div className="flex justify-between items-center text-xs text-white/50 pt-3 border-t border-white/10 relative z-10">
+          <span className="text-[11px] text-slate-400">Curated Streaming Directory</span>
+          <span className="text-xs font-semibold text-[#FF007A] flex items-center gap-1">
+            Zero Ads &amp; Verified
+          </span>
         </div>
       </div>
     );
